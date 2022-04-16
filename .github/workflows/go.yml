@@ -22,7 +22,7 @@ jobs:
       run: cd Go
 
     - name: init
-      run: go mod init 
+      run: go mod init foo/bar
 
     - name: Test
       run: go run -v ./...
