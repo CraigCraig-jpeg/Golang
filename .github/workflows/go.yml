@@ -19,10 +19,10 @@ jobs:
         go-version: 1.17
 
     - name: ChangeDir
-      run: cd Go
+      run: cd Go && pwd
 
     - name: init
       run: go mod init foo/bar
 
     - name: Test
-      run: pwd
+      run: cd Go
