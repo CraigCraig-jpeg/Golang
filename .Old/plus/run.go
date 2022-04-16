@@ -8,7 +8,5 @@ type foo [] int
 
 func main() {
 	x := []int{1,2,3}
-	for ie , edd := range x {
-		fmt.Println(ie , edd)
-	}
+	fmt.Println(x[1:3])
 }
