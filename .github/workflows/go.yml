@@ -22,7 +22,7 @@ jobs:
       run: cd Go && pwd
 
     - name: init
-      run: go mod init foo/bar
+      run: go mod init foo/bar && pwd
 
     - name: Test
-      run: cd Go
+      run: pwd
