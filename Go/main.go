@@ -9,8 +9,12 @@ type bar [] int
 
 func main() {
 	x := [] int {1 , 2 , 3}
-	fmt.Println(x[2:])
-	for i, v := range x {
-		fmt.Println(i , v)
-	}
+	fmt.Println(x)
+	x = append(x, 77 )
+	fmt.Println(x)
+	y := []int {123 , 456}
+	y = append(x , y...)
+	fmt.Println(y)
+	y = append(x[2:], x[4:]...)
+	fmt.Println(y)
 }
