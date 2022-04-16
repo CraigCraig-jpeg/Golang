@@ -20,7 +20,9 @@ jobs:
 
     - name: ChangeDir
       run: cd Go
-    # - name: Build
-    #   run: go build -v ./...
+
+    - name: init
+      run: go mod init 
+
     - name: Test
       run: go run -v ./...
