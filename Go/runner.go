@@ -40,7 +40,25 @@ func main() {
 	fmt.Println(f)
 	fmt.Println(cap(f))
 	fmt.Println(len(f))
-	
-	
+
+	i := [][]int{g , t}
+	fmt.Println(i)
+
+	for _ , h := range i {
+		fmt.Println(h)
+	}
+
+	k := map[string]string {
+		"foo":"bar" ,
+	}
+	k["foo2"] = "bar2"
+	// delete(k , "foo2")
+	for i , v := range k {
+		fmt.Printf("%v\n%v\n%v" , i , v , k[v])
+	}
+	delete(k , "foo")
+	for i , v := range k {
+		fmt.Printf("%v\n%v\n%v" , i , v , k[v])
+	}
 
 }
