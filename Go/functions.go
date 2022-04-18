@@ -10,6 +10,12 @@ func main(){
 	x , y := tang("mike" , "hawk")
 	fmt.Println(x)
 	fmt.Println(y)
+	hoo(1 , 2, 3 , 4)
+	troo([]int{1 , 2 , 3})
+	j := []int{2 ,3 ,4}
+	
+	fmt.Println(j)
+
 }
 
 func foo(){
@@ -25,4 +31,15 @@ func tang(str string , ln string) (string, bool){
 	a := fmt.Sprint(str , ln)
 	b := false
 	return a , b
+}
+func hoo (x ...int){
+	for _ , v := range x {
+		fmt.Println(v)
+	}
+	fmt.Printf("%T\n" , x)
+}
+func troo(x []int){
+	for _ , v := range x {
+		fmt.Println(v)
+	}
 }
