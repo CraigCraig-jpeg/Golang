@@ -5,4 +5,4 @@
 
 I love Go and it has a special place on my heart. Read this for pure beauty
 
-(bill kenedy)[https://www.ardanlabs.com/blog/2015/09/composition-with-go.html]
+(Bill kennedy)[https://www.ardanlabs.com/blog/2015/09/composition-with-go.html]
