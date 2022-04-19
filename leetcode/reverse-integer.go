@@ -27,7 +27,6 @@ func reverse(x int) int{
 		}
 	return int(rev_num * -1)
 	}
-
 	var rev_num int32
 	for y > 0 {
 		rev_num = rev_num*10 + y%10
