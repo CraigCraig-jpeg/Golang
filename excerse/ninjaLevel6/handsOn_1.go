@@ -11,5 +11,5 @@ func foo(x int ) int {
 }
 
 func bar(x int , y string) int string {
-	x := "main"
-}
+	
+} 
