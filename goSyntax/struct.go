@@ -26,7 +26,7 @@ func main(){
 	k := secretAgent {
 		person : person{
 		name : "Craig",
-		middle : "",
+		middle : "lorem",
 		surname : "Samuelson",
 		},
 		ltk : true, 
@@ -44,13 +44,21 @@ func main(){
 		k.middle : k ,
 		k.surname : k ,
 	}
+	g := map[string]string {
+		"name" : k.person.name ,
+		"middle" : k.middle ,
+		"surname" : k.surname ,
+	}
 
 	fmt.Println(i.name , i.surname)
-	fmt.Println(j.name , j.middle , j.surname)
+	fmt.Println(j.name , j.surname , j.middle)
 	fmt.Println(k.name , k.surname , k.ltk)
 	fmt.Println(l.name , l.age )
 
 	for _ , v := range o {
 		fmt.Println(v)
+	}
+	for _ , v := range g {
+		fmt.Println(i , v)
 	}
 }
