@@ -56,7 +56,7 @@ func main() {
 	ePtr := new([10]int)
 	mPtr := &ePtr[0]
 	*mPtr = 10
-	fmt.Println(ePtr)
+	fmt.Println(ePtr) 
 
 	lPtr := new([]int)
 	*lPtr = append([]int{} ,0)
