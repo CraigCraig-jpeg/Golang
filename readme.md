@@ -1,5 +1,6 @@
 
-![gopher-powerful](https://user-images.githubusercontent.com/78127468/164078245-104cb18c-90fc-4eca-826b-b499c14ec6ea.gif)
+![giphy](https://user-images.githubusercontent.com/78127468/164938144-4b92a3e8-b68d-4a44-914d-de77f2490a2b.gif)
+
 
 I love Go and it has a special place on my heart. Read this for pure beauty
 
