@@ -34,8 +34,6 @@ func main() {
 	}
 	fmt.Println(z.First)
 
-	
-
 	k :=  `[{"First":"Craig", "Last":"Samu" , "Age":30}]`
 	kS := []byte(k)
 	
