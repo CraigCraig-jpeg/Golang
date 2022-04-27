@@ -21,12 +21,11 @@ func (l *linkedNode) changeMe(n *node) {
 	l.length++
 }
 
-func (l linkedNode) printList() {
-	toPrint := l.head 
-	for l.length != 0 {
-		fmt.Println(toPrint.data)
-		toPrint = toPrint.next
-		l.length--
+func (l *linkedNode) browse() {
+	first := l.head
+	for i := 0; i < l.length; i++ {
+		fmt.Println(first.data)
+		first = l.head.next
 	}
 }
 
@@ -41,9 +40,8 @@ func main() {
 
 	list.changeMe(num)
 	num2 := &node{
-		data: 10,
+		data: 11,
 	}
 	list.changeMe(num2)
-	list.printList()
-	
+	list.browse()
 }
