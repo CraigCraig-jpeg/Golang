@@ -7,8 +7,6 @@ import (
 	"strconv"
 	"strings"
 )
-
-
   	// Definition for singly-linked list.
 type ListNode struct {
     Val int
@@ -37,6 +35,15 @@ func (l ListNodeList) total() []int {
 	}
 	return t
 }  
+
+func (l *ListNodeList)removeNode(v int) {
+	valueToDelete := l.head
+	for valueToDelete.Next.Val != v {
+		valueToDelete = valueToDelete.Next
+	}
+	valueToDelete.Next = valueToDelete.Next.Next
+	l.length-- 
+}
 
 func val(x []int) int{
 	values := x
@@ -81,13 +88,13 @@ func main() {
 		Val: 4,
 	}
 	node1B := &ListNode{
-		Val: 4,
+		Val: 2,
 	}
 	node2B := &ListNode{
 		Val: 4,
 	}
 	node3B := &ListNode{
-		Val: 4,
+		Val: 1,
 	}
 	listB := &ListNodeList{
 
@@ -96,9 +103,10 @@ func main() {
 	listB.prepend(node1B)
 	listB.prepend(node2B)
 	listB.prepend(node3B)
+	listB.removeNode(4)
 
 	val2 := val(listB.total())
 
-	fmt.Println(val1 + val2)
+	fmt.Println(val1 , val2)
 }	
 
