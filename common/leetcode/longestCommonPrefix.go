@@ -8,6 +8,7 @@ import (
 )
 
 func longestCommonPrefix(strs []string) string {
+	
 	rar := true
 	for _, str := range strs {
 		if str == "" {
@@ -22,10 +23,11 @@ func longestCommonPrefix(strs []string) string {
 		var i int = 0
 		for bol{
 			x := strs[0]
+			
 			t := x[0:i]
 			mon := 0
-			for _ , v := range strs{
-				if r := strings.HasPrefix(v, t) ; r == true{
+			for fr := 0 ; fr < 200 ; fr++{
+				if r := strings.HasPrefix(strs[fr], t) ; r == true {
 					// fmt.Println(r , v , t) 
 					mon ++ 
 				}else {
@@ -51,7 +53,7 @@ func main() {
 	// input := []string{"flower","flow","flight"}
 	// input := []string{""}
 
-	// input := []string{"flower","flower","flower","flower"}
+	input := []string{"flower","flower","flower","flower"}
 	x := longestCommonPrefix(input)
 	fmt.Println(x)
 	// fmt.Println(input)
