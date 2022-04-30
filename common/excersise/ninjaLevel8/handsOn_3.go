@@ -52,6 +52,6 @@ func main() {
 	// fmt.Println(users)
 
 	// your code goes here
-	v , _ := json.Marshal(users)
-	_ = json.NewEncoder(os.Stdout).Encode(v )
+	// v , _ := json.Marshal(users)
+	_ = json.NewEncoder(os.Stdout).Encode(users)
 }
