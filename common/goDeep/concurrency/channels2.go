@@ -9,13 +9,21 @@ func main() {
 	
 	go send(c )
 	
-	receive(c )
+	for s := range c {
+		fmt.Println(s)
+	}
+	// receive(c )
 }
 
 func send(c chan<- int) {
-	c <- 32 
+	for i := 0; i < 100; i++ {
+		c <- i 
+	}
+	close(c)
 }
 
-func receive(c <-chan int) {
-	fmt.Println(<-c)
-}
+// func receive(c <-chan int) {
+// 	for i := 0; i < 100; i++ {
+// 		fmt.Println(<-c)
+// 	}
+// }
