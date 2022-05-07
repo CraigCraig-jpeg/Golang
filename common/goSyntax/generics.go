@@ -5,13 +5,19 @@ import (
 )
 
 func main() {
-
+	fmt.Println(min(1 , 2))
 }
 
-//parameter with constraints
-func min(x , y int) int {
-	if x < y {
-		return x
+//generic variadic parameter with constraints
+func min[T int](x ...T) int {
+	var i int
+	for _ , v := range x {
+		i += int(v)
 	}
-	return y
+	return i
+}
+
+//generic parameter with no constraints
+func miner[T interface{}](x T , y T) T {
+	return x
 }
