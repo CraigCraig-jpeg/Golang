@@ -35,11 +35,12 @@ func main() {
 				fmt.Println("the value received from the even channel:", v)
 			case v := <-odd:
 				fmt.Println("the value received from the odd channel:", v)
-			case i, ok := <-quit:
-				if !ok {
+			case i, ok := <-quit: // assign quit to i , value ok is true 
+				if !ok { // if ok == false
 					fmt.Println("from comma ok bit", i)
 					return
-				} else {
+				} else { // if value is polled off off quit and ok is true then print
+						// stupid fuking statement since that wont happen ever 
 					fmt.Println("from comma ok bit", i)
 				}
 				/* this is a odd case i will explain why...
