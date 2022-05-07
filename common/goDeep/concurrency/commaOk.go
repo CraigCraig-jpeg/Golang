@@ -42,6 +42,14 @@ func main() {
 				} else {
 					fmt.Println("from comma ok bit", i)
 				}
+				/* this is a odd case i will explain why...
+				odd <- i means it assignes the value to the odd channel
+				x := <-odd means it pulls the value from the odd channel and assignes it
+				to the value x 
+				x , ok := <- odd means it pulls the value and assines it to the value.
+				the value ok is a bool that becomes fulse once the channel is blocked 
+				find https://go.dev/tour/concurrency/4 for more information
+				*/
 			}
 		}
 	}
