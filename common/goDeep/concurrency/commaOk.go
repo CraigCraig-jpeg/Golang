@@ -47,7 +47,8 @@ func main() {
 				x := <-odd means it pulls the value from the odd channel and assignes it
 				to the value x 
 				x , ok := <- odd means it pulls the value and assines it to the value.
-				the value ok is a bool that becomes fulse once the channel is blocked 
+				the value ok is a bool that becomes fulse once the channel is closed and 
+				there are no more values to be polled off the odd channel
 				find https://go.dev/tour/concurrency/4 for more information
 				*/
 			}
