@@ -10,7 +10,7 @@ func main() {
 	end := make(chan int)
 
 	go send(even, odd, end)
-	go receive(even, odd, end)
+	receive(even, odd, end)
 }
 
 func receive(even, odd, end <-chan int){
@@ -34,8 +34,8 @@ func send(x, y, z chan<- int){
 		}else {
 			y <- i
 		}
-		close(x)
-		close(y)
 	}
+	close(x)
+	close(y)
 	z <- 0
 }
