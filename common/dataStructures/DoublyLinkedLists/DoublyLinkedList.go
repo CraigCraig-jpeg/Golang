@@ -1,0 +1,1 @@
+// package https://pkg.go.dev/container/list@go1.18.1
