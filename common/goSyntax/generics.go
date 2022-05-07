@@ -6,6 +6,8 @@ import (
 
 func main() {
 	fmt.Println(min(1 , 2))
+	fmt.Println(miner[int](1 , 2))
+	fmt.Println(miner2[int](1 , 2))
 }
 
 //generic variadic parameter with constraints
@@ -19,5 +21,10 @@ func min[T int](x ...T) int {
 
 //generic parameter with no constraints
 func miner[T interface{}](x T , y T) T {
-	return x
+
+	return x 
+}
+//generic parameter with constraints
+func miner2[T int](x T , y T) T {
+	return x + y
 }
