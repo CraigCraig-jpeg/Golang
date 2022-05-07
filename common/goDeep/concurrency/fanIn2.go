@@ -30,12 +30,13 @@ func fanIn(input1, input2 <-chan string) <-chan string {
 	c := make(chan string)
 	go func() {
 		for {
-			c <- <-input1
+			value := <-input1
+			c <- value
 		}
 	}()
 	go func() {
 		for {
-			c <- <-input2
+			c <- <- input2
 		}
 	}()
 	return c
