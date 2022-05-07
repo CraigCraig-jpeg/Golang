@@ -9,19 +9,33 @@ func main() {
 	odd := make(chan int)
 	end := make(chan int)
 
-	go send(x chan int, y chan int, z chan int)
+	go send(even, odd, end)
+	go receive(even, odd, end)
 }
 
-func send(x, y, z chan<-  int){
+func receive(even, odd, end <-chan int){
+	for {
+		select {
+		case v :=  <-even:
+			fmt.Println(v)
+		case v := <-odd:
+			fmt.Println(v)
+		case v := <-end:
+			fmt.Println(v)
+			return
+		}
+	}
+}
+
+func send(x, y, z chan<- int){
 	for i := 0; i < 100; i++ {
 		if i % 2 == 0 {
 			x <- i
-		}
-		if i % 2 == 1 {
+		}else {
 			y <- i
 		}
 		close(x)
 		close(y)
-		q <- 0
 	}
+	z <- 0
 }
