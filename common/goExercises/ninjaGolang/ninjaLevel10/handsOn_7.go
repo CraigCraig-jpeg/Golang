@@ -13,11 +13,14 @@ func main() {
 			}
 		}(r)
 	}
-
-
-	// close(r)
-	for h := range r {
-		fmt.Println(h)
+	
+	// for h := range r {
+		// 	fmt.Println(h)
+		// }
+		
+	for i := 0; i < 100; i++ {
+		fmt.Println(<-r)
 	}
+	close(r)
 	fmt.Println("end of routines")
 }
