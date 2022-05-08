@@ -17,7 +17,8 @@ func main() {
 		n := 0
 		for {
 			select {
-			case <-ctx.Done():
+			case <-ctx.Done():	
+				fmt.Println("ctx closed")
 				return
 			default:
 				n++
@@ -27,7 +28,7 @@ func main() {
 		}
 	}()
 
-	time.Sleep(time.Second * 2)
+	time.Sleep(time.Second * 4)
 	fmt.Println("error check 2:", ctx.Err())
 	fmt.Println("num gortins 2:", runtime.NumGoroutine())
 
