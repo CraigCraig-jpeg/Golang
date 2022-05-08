@@ -42,3 +42,4 @@ type variadic interface {
 func miner3[T variadic](x T , y T) T {
 	return x + y
 }
+
