@@ -1,7 +1,7 @@
 package main 
 
 import (
-	// "fmt"
+	"fmt"
 	"os"
 	"log"
 )
@@ -21,7 +21,9 @@ func main() {
 	_, err = os.Open("randosm.txt")
 	if err != nil {
 		// fmt.Println(err)
-		log.Println(err)
+		// log.Println(err)
+		log.Fatal(err)
 	}
+	fmt.Println("lol")
 
 }
