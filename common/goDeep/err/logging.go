@@ -17,13 +17,15 @@ func main() {
 		log.Println(err)
 	}
 	log.SetOutput(f)
-
 	_, err = os.Open("randosm.txt")
 	if err != nil {
 		// fmt.Println(err)
 		// log.Println(err)
-		log.Fatal(err)
+		// log.Fatal(err)
+		// log.Fatalln(err)
+		log.Panicln(err)
+		// panic(err) // stops go routine 
+
 	}
 	fmt.Println("lol")
-
 }
