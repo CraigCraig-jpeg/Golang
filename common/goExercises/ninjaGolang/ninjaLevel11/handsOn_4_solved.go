@@ -16,17 +16,17 @@ func (se sqrtError) Error() string {
 }
 
 func main() {
-	v , err := sqrt(-10.23)
+	_, err := sqrt(-10.23)
 	if err != nil {
 		log.Println(err)
 	}
 }
 
 func sqrt(f float64) (float64, error) {
-	x := new(sqrtError)
-	x.Error()
 	if f < 0 {
-		return 0 , x.err
+		// e := errors.New("more coffee needed")
+		e := fmt.Errorf("more coffee needed - value was %v", f)
+		return 0, sqrtError{"50.2289 N", "99.4656 W", e}
 	}
 	return 42, nil
 }
