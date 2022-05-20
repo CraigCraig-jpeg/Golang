@@ -1,0 +1,12 @@
+	<!DOCTYPE html>
+	<html>
+	<body>
+    {{range .}}
+	<h1>{{.}}</h1>
+    {{end}}
+    {{range $index, $element := .}}
+    <h1>{{$index}} , {{$element}}</h1>
+    {{end}}
+	</body>
+	</html>
+	
