@@ -16,5 +16,5 @@ func main () {
 	defer f.Close()
 	r := strings.NewReader("lol")
 
-	io.Copy(r, f)
+	io.Copy(r, f) 
 }
