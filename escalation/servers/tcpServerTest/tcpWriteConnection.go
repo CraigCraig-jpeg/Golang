@@ -19,8 +19,8 @@ func main() {
 			panic(err)
 		}
 		// go handleConnection(conn)
-		io.WriteString(conn, "Hi")
-		log.Printf("adress: %v, adress_network: %v,adress_string: %v" , ln.Addr(),ln.Addr().Network(),ln.Addr().String() )
+		io.WriteString(conn, "Connection established\n")
+		log.Printf("adress_local: %v, adress_Remote: %v" , conn.LocalAddr(),conn.RemoteAddr())
 		conn.Close()
 	}
 }
