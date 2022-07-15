@@ -13,5 +13,5 @@ func main() {
 	reader.Scan()
 	text := reader.Text()
 	fmt.Println(text)
-
+	
 }
